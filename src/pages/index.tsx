@@ -7,6 +7,7 @@ import { useState } from "react";
 import { TrendingCard } from "@/components/molecules/TrendingCard";
 import { BottomSheet, BottomSheetState } from "@/components/atoms/BottomSheet";
 import { PNLChart } from "@/components/atoms/PNLChart";
+import Link from "next/link";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -29,12 +30,12 @@ export default function Home() {
 
       <div className="flex flex-row  justify-between">
 
-        <div className="flex flex-row gap-1 items.center"> <img src="./assets/logo-black.jpg" className="h-[32px]" height={18} alt="home" /></div>
+        <div className="flex flex-row gap-1 items.center"> <img src="./assets/logo.png" className="h-[32px]" height={18} alt="home" /></div>
         <div className="">
 
           <BottomSheet
-            trigger={<div className="flex flex-row cursor-pointer  gap-1 items-center text-xs font-semibold text-white/60">
-              <img src="./assets/gift.png" height={18} className="h-[24px]" alt="lootbox" /> Rewards </div>
+            trigger={<Link href='/rewards'><div className="flex flex-row cursor-pointer  gap-1 items-center text-xs font-semibold text-white/60">
+              <img src="./assets/gift.png" height={18} className="h-[24px]" alt="lootbox" /> Rewards </div></Link>
             }
             // state={trendingTab}
             // setState={(state) => setTrendingTab(state)}
@@ -351,29 +352,29 @@ const TrendingFundCard: React.FC<TrendingFundData> = ({
 
   return (
     <div className="flex flex-row items-center justify-between p-2 gap-1 border-[#232425] bg-[#1e1e1e] border mx-2 mb-1 rounded">
-<div className="flex flex-col">
-          <h1 className='text-sm font-medium'>{name}</h1>
-          <div className="flex flex-col w-fit">
-            <span
-              className={`text-xs px-2 py-0.5 rounded ${category === FundCategory.AI_MANAGED ? 'bg-blue-800/50' :
-                  category === FundCategory.KOL_MANAGED ? 'bg-green-800/50' :
-                    category === FundCategory.INDEXES ? 'bg-purple-800/50' :
-                      category === FundCategory.CABAL_CHATS ? 'bg-red-800/50' :
-                        category === FundCategory.CRYPTO_AI ? 'bg-yellow-800/50' :
-                          'bg-gray-800/50'
-                } text-white`}
-            >
-              {category}
-            </span>
-          </div></div>
-          <PNLChart data={positive ? positiveData : negativeData} />
-          <div className="flex flex-col gap-1 text-right">
-            <div className={positive ? 'text-green-400' : 'text-red-400'}>
-              {per}%
-            </div>
-            <div className='text-xs text-gray-400'>{mcap} Avg MCap</div>
-          </div>
-   
+      <div className="flex flex-col">
+        <h1 className='text-sm font-medium'>{name}</h1>
+        <div className="flex flex-col w-fit">
+          <span
+            className={`text-xs px-2 py-0.5 rounded ${category === FundCategory.AI_MANAGED ? 'bg-blue-800/50' :
+              category === FundCategory.KOL_MANAGED ? 'bg-green-800/50' :
+                category === FundCategory.INDEXES ? 'bg-purple-800/50' :
+                  category === FundCategory.CABAL_CHATS ? 'bg-red-800/50' :
+                    category === FundCategory.CRYPTO_AI ? 'bg-yellow-800/50' :
+                      'bg-gray-800/50'
+              } text-white`}
+          >
+            {category}
+          </span>
+        </div></div>
+      <PNLChart data={positive ? positiveData : negativeData} />
+      <div className="flex flex-col gap-1 text-right">
+        <div className={positive ? 'text-green-400' : 'text-red-400'}>
+          {per}%
+        </div>
+        <div className='text-xs text-gray-400'>{mcap} Avg MCap</div>
+      </div>
+
 
     </div>
   );

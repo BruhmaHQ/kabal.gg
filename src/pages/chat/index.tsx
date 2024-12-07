@@ -1,4 +1,5 @@
 import { PlusCircle, MoveRight } from 'lucide-react'
+import Link from 'next/link';
 const ChatPage = () => {
     return (<div className="p-2 ">
 
@@ -22,69 +23,72 @@ const ChatPage = () => {
 
             </div></div>
         <div className="">
-            <div className="flex flex-row items-center border-b-[1px] border-[#262626] p-3">
-                <div className="h-8 w-8 rounded-full bg-gray-500"></div>
-                <div className="mx-4 grid grid-cols-2">
-                    <h1 className="font-mono font-semibold text-white">Beta Fuck</h1>
-                    <div className=""></div>
-                    <div className="text-green-500">+420%</div>
-                    <div className="flex flex-row items-center gap-1 rounded-full px-[4px] text-xs text-[#7A7A7A]">
-                        <div className="h-1 w-1 rounded-full bg-green-500"></div>
-                        40 Degens online
+            <Link href='/chat/beta-fuck'>
+                <div className="flex flex-row items-center border-b-[1px] border-[#262626] p-3">
+                    <div className="h-8 w-8 rounded-full bg-gray-500"></div>
+                    <div className="mx-4 grid grid-cols-2">
+                        <h1 className="font-mono font-semibold text-white">Beta Fuck</h1>
+                        <div className=""></div>
+                        <div className="text-green-500">+420%</div>
+                        <div className="flex flex-row items-center gap-1 rounded-full px-[4px] text-xs text-[#7A7A7A]">
+                            <div className="h-1 w-1 rounded-full bg-green-500"></div>
+                            2 Degens online
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div className="flex flex-row items-center border-b-[1px] border-[#262626] p-3">
-                <div className="h-8 w-8 rounded-full bg-gray-500"></div>
-                <div className="mx-4 grid grid-cols-2">
-                    <h1 className="font-mono font-semibold text-white">Beta Fuck</h1>
-                    <div className=""></div>
-                    <div className="text-green-500">+420%</div>
-                    <div className="flex flex-row items-center gap-1 rounded-full px-[4px] text-xs text-[#7A7A7A]">
-                        <div className="h-1 w-1 rounded-full bg-green-500"></div>
-                        40 Degens online
-                    </div>
-                </div>
-            </div>
-            <div className="flex flex-row items-center border-b-[1px] border-[#262626] p-3">
-                <div className="h-8 w-8 rounded-full bg-gray-500"></div>
-                <div className="mx-4 grid grid-cols-2">
-                    <h1 className="font-mono font-semibold text-white">Beta Fuck</h1>
-                    <div className=""></div>
-                    <div className="text-green-500">+420%</div>
-                    <div className="flex flex-row items-center gap-1 rounded-full px-[4px] text-xs text-[#7A7A7A]">
-                        <div className="h-1 w-1 rounded-full bg-green-500"></div>
-                        40 Degens online
-                    </div>
-                </div>
-            </div>
-            <div className="flex flex-row items-center border-b-[1px] border-[#262626] p-3">
-                <div className="h-8 w-8 rounded-full bg-gray-500"></div>
-                <div className="mx-4 grid grid-cols-2">
-                    <h1 className="font-mono font-semibold text-white">Beta Fuck</h1>
-                    <div className=""></div>
-                    <div className="text-green-500">+420%</div>
-                    <div className="flex flex-row items-center gap-1 rounded-full px-[4px] text-xs text-[#7A7A7A]">
-                        <div className="h-1 w-1 rounded-full bg-green-500"></div>
-                        40 Degens online
-                    </div>
-                </div>
-            </div>
-            <div className="flex flex-row items-center border-b-[1px] border-[#262626] p-3">
-                <div className="h-8 w-8 rounded-full bg-gray-500"></div>
-                <div className="mx-4 grid grid-cols-2">
-                    <h1 className="font-mono font-semibold text-white">Beta Fuck</h1>
-                    <div className=""></div>
-                    <div className="text-green-500">+420%</div>
-                    <div className="flex flex-row items-center gap-1 rounded-full px-[4px] text-xs text-[#7A7A7A]">
-                        <div className="h-1 w-1 rounded-full bg-green-500"></div>
-                        40 Degens online
-                    </div>
-                </div>
-            </div>
+                </div></Link>
 
-
-
+            <Link href='/chat/beta-fuck'>
+                <div className="flex flex-row items-center border-b-[1px] border-[#262626] p-3">
+                    <div className="h-8 w-8 rounded-full bg-gray-500"></div>
+                    <div className="mx-4 grid grid-cols-2">
+                        <h1 className="font-mono font-semibold text-white">Beta Fuck</h1>
+                        <div className=""></div>
+                        <div className="text-green-500">+420%</div>
+                        <div className="flex flex-row items-center gap-1 rounded-full px-[4px] text-xs text-[#7A7A7A]">
+                            <div className="h-1 w-1 rounded-full bg-green-500"></div>
+                            2 Degens online
+                        </div>
+                    </div>
+                </div></Link>
+            <Link href='/chat/beta-fuck'>
+                <div className="flex flex-row items-center border-b-[1px] border-[#262626] p-3">
+                    <div className="h-8 w-8 rounded-full bg-gray-500"></div>
+                    <div className="mx-4 grid grid-cols-2">
+                        <h1 className="font-mono font-semibold text-white">Alpha Fuck</h1>
+                        <div className=""></div>
+                        <div className="text-green-500">+420%</div>
+                        <div className="flex flex-row items-center gap-1 rounded-full px-[4px] text-xs text-[#7A7A7A]">
+                            <div className="h-1 w-1 rounded-full bg-green-500"></div>
+                            2 Degens online
+                        </div>
+                    </div>
+                </div></Link>
+            <Link href='/chat/beta-fuck'>
+                <div className="flex flex-row items-center border-b-[1px] border-[#262626] p-3">
+                    <div className="h-8 w-8 rounded-full bg-gray-500"></div>
+                    <div className="mx-4 grid grid-cols-2">
+                        <h1 className="font-mono font-semibold text-white">Beta Cucks</h1>
+                        <div className=""></div>
+                        <div className="text-red-500">-69%</div>
+                        <div className="flex flex-row items-center gap-1 rounded-full px-[4px] text-xs text-[#7A7A7A]">
+                            <div className="h-1 w-1 rounded-full bg-green-500"></div>
+                            1 Degens online
+                        </div>
+                    </div>
+                </div></Link>
+            <Link href='/chat/beta-fuck'>
+                <div className="flex flex-row items-center border-b-[1px] border-[#262626] p-3">
+                    <div className="h-8 w-8 rounded-full bg-gray-500"></div>
+                    <div className="mx-4 grid grid-cols-2">
+                        <h1 className="font-mono font-semibold text-white">Beta Fuck</h1>
+                        <div className=""></div>
+                        <div className="text-green-500">+420%</div>
+                        <div className="flex flex-row items-center gap-1 rounded-full px-[4px] text-xs text-[#7A7A7A]">
+                            <div className="h-1 w-1 rounded-full bg-green-500"></div>
+                            2 Degens online
+                        </div>
+                    </div>
+                </div></Link>
         </div>
 
     </div>)
