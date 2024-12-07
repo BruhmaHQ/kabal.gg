@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import Tabs from "@/components/atoms/Tabs";
 import { useState } from "react";
 import { TrendingCard } from "@/components/molecules/TrendingCard";
+import { BottomSheet, BottomSheetState } from "@/components/atoms/BottomSheet";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -19,6 +20,7 @@ const geistMono = localFont({
 
 export default function Home() {
   const [active, setActive] = useState('all')
+  const [trendingTab, setTrendingTab] = useState<BottomSheetState>('closed');
   return (
     <div
       className={`${geistSans.variable} ${geistMono.variable} overflow-hidden dark items-center  py-3  px-2  font-[family-name:var(--font-geist-sans)]`}
@@ -26,14 +28,23 @@ export default function Home() {
 
       <div className="flex flex-row  justify-between">
 
-        <div className="flex flex-row gap-1 items.center"> <img src="./assets/logo.jpg" className="h-[32px]" height={18} alt="home" /></div>
+        <div className="flex flex-row gap-1 items.center"> <img src="./assets/logo-black.jpg" className="h-[32px]" height={18} alt="home" /></div>
+        <div className="">
 
-        <div className="flex flex-row gap-1 items-center text-xs font-semibold text-white/60"><img src="./assets/gift.png" height={18} className="h-[24px]" alt="lootbox" /> Rewards </div></div>
+          <BottomSheet
+            trigger={<div className="flex flex-row cursor-pointer  gap-1 items-center text-xs font-semibold text-white/60">
+              <img src="./assets/gift.png" height={18} className="h-[24px]" alt="lootbox" /> Rewards </div>
+            }
+            // state={trendingTab}
+            // setState={(state) => setTrendingTab(state)}
+            minimalContent={<div></div>}
+            expandedContent={<p>Expanded Content</p>}
 
+          /></div></div>
 
       <div className="my-1">
         <div className=" flex flex-row gap-2 items-center  p-3">
-          <img src="./assets/trending.png"  className='h-[42px]' alt="" />
+          <img src="./assets/trending.png" className='h-[42px]' alt="" />
           <h1 className="font-semibold ">Trending Cases</h1>
         </div>
         <Tabs activeTab={active} setActiveTab={setActive} layoutid="home-tabs"
