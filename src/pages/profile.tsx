@@ -1,11 +1,15 @@
 import {Expand} from 'lucide-react'
+import { useAccount } from 'wagmi';
+
 const ProfilePage = () => {
+    const { address } = useAccount()
     return (<div className=""><div className="m-1 flex flex-col items-center gap-1">
         <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-b from-[#FF9502] to-[#b5ed5a] text-[3rem]">👽</div>
 
 
         <h1 className="my-2 text-xl font-semibold text-white">Memerizzer</h1>
         <h2 className="text-lg text-white/80">$3,000</h2>
+        <h2 className='text-lg text-white/80'>{address}</h2>
 
 
         <div className="my-4 text-neutral-800 grid grid-cols-4 gap-2">
