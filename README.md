@@ -6,9 +6,12 @@ Kabal is a socialfi defi app where users can invest into narratives easily. You 
 
 
 ## Kabal AI - Your cabal's degen intern
+
+<img src="https://github.com/user-attachments/assets/07125f38-c196-43c9-b646-0f271d8b9337" width='60'/>
+
 Kabal AI helps your group chat to execute calls together. Kabal.gg allows you to create kabal's where you can trade together. Kabbal AI built using the **CDK AgentKit** acts as an autonomous agent, that has agentic capability to assist the chat. There is a base contract that enables the group trading and a replit whith the agent.
 
-<img width="821" alt="Screenshot 2024-12-08 at 3 32 50 AM" src="https://github.com/user-attachments/assets/6fb2cf37-c8f3-460f-9a14-94ab7003635f">
+
 
 
 ## Architecture
