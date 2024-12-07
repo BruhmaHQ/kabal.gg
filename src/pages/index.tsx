@@ -42,6 +42,13 @@ export default function Home() {
 
           /></div></div>
 
+
+ <div className="flex w-full py-1 mt-3 h-fit  flex-row overflow-scroll scroll-hide  gap-2">
+<TrendingCard icon={'⚡️'} title="Trending" section={[{ title: 'Cross-chain comms', isPositive: true, percentage: 12.8 }, { title: 'Base Memes', isPositive: true, percentage: 12.8 }, { title: 'Seuioa Portfolio', isPositive: true, percentage: 12.8 },]} />
+<TrendingCard icon="🚀" title="Top Gainers" section={[{ title: 'Christmas themmed', isPositive: true, percentage: 12.8 }, { title: 'Yield optimizer', isPositive: true, percentage: 12.8 }, { title: 'Name service', isPositive: true, percentage: 12.8 },]} />
+<TrendingCard icon="🚨" title="Top Lossers" section={[{ title: 'Ecommerce', isPositive: false, percentage: 12.8 }, { title: 'Country Memes', isPositive: false, percentage: 12.8 }, { title: 'Clanker Ecosystem', isPositive: false, percentage: 12.8 },]} />
+</div>
+
       <div className="my-1">
         <div className=" flex flex-row gap-2 items-center  p-3">
           <img src="./assets/trending.png" className='h-[42px]' alt="" />
@@ -57,12 +64,12 @@ export default function Home() {
           ]} />
       </div>
 
-      <div className="text-xs flex flex-row gap-1">
-        <h1>Title</h1>
-        <h2>PNL</h2>
-        <h2>Category</h2>
-        <h2></h2>
-        <h2></h2>
+
+<div className="grid grid-cols-3">
+
+<div className=""></div>
+
+      
       </div>
 
       {/* <div className="flex gap-4 items-center flex-col sm:flex-row">

@@ -1197,6 +1197,7 @@ __metadata:
     "@types/react-dom": "npm:^18"
     class-variance-authority: "npm:^0.7.1"
     clsx: "npm:^2.1.1"
+    echarts: "npm:^5.5.1"
     eslint: "npm:^8"
     eslint-config-next: "npm:15.0.3"
     framer-motion: "npm:^11.13.1"
@@ -1594,6 +1595,16 @@ __metadata:
   version: 0.2.0
   resolution: "eastasianwidth@npm:0.2.0"
   checksum: 10c0/26f364ebcdb6395f95124fda411f63137a4bfb5d3a06453f7f23dfe52502905bd84e0488172e0f9ec295fdc45f05c23d5d91baf16bd26f0fe9acd777a188dc39
+  languageName: node
+  linkType: hard
+
+"echarts@npm:^5.5.1":
+  version: 5.5.1
+  resolution: "echarts@npm:5.5.1"
+  dependencies:
+    tslib: "npm:2.3.0"
+    zrender: "npm:5.6.0"
+  checksum: 10c0/2f7e3037f17fda99d977092767943f4d9b0c8f886f86701ec88591707713b5e5fd683e56086b6ba5245b322f088184bdb06eac488234c20a1869b08cb6b4e523
   languageName: node
   linkType: hard
 
@@ -4509,6 +4520,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"tslib@npm:2.3.0":
+  version: 2.3.0
+  resolution: "tslib@npm:2.3.0"
+  checksum: 10c0/a845aed84e7e7dbb4c774582da60d7030ea39d67307250442d35c4c5dd77e4b44007098c37dd079e100029c76055f2a362734b8442ba828f8cc934f15ed9be61
+  languageName: node
+  linkType: hard
+
 "tslib@npm:^2.0.0, tslib@npm:^2.1.0, tslib@npm:^2.4.0":
   version: 2.8.1
   resolution: "tslib@npm:2.8.1"
@@ -4845,5 +4863,14 @@ __metadata:
   version: 0.1.0
   resolution: "yocto-queue@npm:0.1.0"
   checksum: 10c0/dceb44c28578b31641e13695d200d34ec4ab3966a5729814d5445b194933c096b7ced71494ce53a0e8820685d1d010df8b2422e5bf2cdea7e469d97ffbea306f
+  languageName: node
+  linkType: hard
+
+"zrender@npm:5.6.0":
+  version: 5.6.0
+  resolution: "zrender@npm:5.6.0"
+  dependencies:
+    tslib: "npm:2.3.0"
+  checksum: 10c0/f7c5a1739dfec60b9bead0d0657c47868391b1009cc82a603f9dbf247fa625df28dcdb3e7b2e18404657e2c987f95e0e1bb5613519c2d823854f3dda44e2ee96
   languageName: node
   linkType: hard
