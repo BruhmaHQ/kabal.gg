@@ -24,13 +24,13 @@ export const AppLayout = ({ children }: any) => {
   const path = usePathname()
   const { address } = useAccount()
 
-  if (!address && path !== '/login') {
-    useEffect(() => {
-      router.push('/');
+  // if (!address && path !== '/login') {
+  //   useEffect(() => {
+  //     router.push('/');
 
-    });
-    return <main className="h-screen p-2 ">Loading....</main>;
-  }
+  //   });
+  //   return <main className="h-screen p-2 ">Loading....</main>;
+  // }
 
   return (<main className="h-screen  overflow-y-scroll flex flex-col items-center justify-center">
 
