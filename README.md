@@ -30,10 +30,10 @@ Kabal AI helps your group chat to execute calls together. Kabal.gg allows you to
 
 <p float="left">
   <img src="./demo/home.png" width="300" />
-  <img src="./demo/ai-info.png" width="300" /> 
-  <img src="./demo/case-view.png" width="300" />
+  <img src="./demo/ai.png" width="300" /> 
+  <img src="./demo/case.png" width="300" />
     <img src="./demo/chat.png" width="300" />
       <img src="./demo/chat-detail.png" width="300" />
         <img src="./demo/search.png" width="300" />
-                <img src="./demo/bags.png" width="300" />
+                <img src="./demo/rewards.png" width="300" />
 </p>
