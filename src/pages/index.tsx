@@ -1,6 +1,6 @@
 import Image from "next/image";
 import localFont from "next/font/local";
-import { section } from "framer-motion/client";
+import { h1, section } from "framer-motion/client";
 import { cn } from "@/lib/utils";
 import Tabs from "@/components/atoms/Tabs";
 import { useState } from "react";
@@ -58,11 +58,11 @@ export default function Home() {
         </div>
         <Tabs activeTab={active} setActiveTab={setActive} layoutid="home-tabs"
           tabs={[
-            { key: 'all', label: 'All' },
-            { key: 'index', label: 'Index' },
-            { key: 'kabal', label: 'Kabals' },
-            { key: 'kol', label: 'KOL Managed' },
-            { key: 'ai', label: 'AI Managed' },
+            { key: 'all', label: <div className="flex flex-col gap-1 items-center p-1"> <h1>Image</h1> <h2>All</h2></div> },
+            { key: 'index', label: <div className="flex flex-col gap-1 items-center p-1"> <h1>Image</h1> <h2>Index</h2></div> },
+            { key: 'kabal', label: <div className="flex flex-col gap-1 items-center p-1"> <h1>Image</h1> <h2>Kabal</h2></div> },
+            { key: 'kol', label: <div className="flex flex-col gap-1 items-center p-1"> <h1>Image</h1> <h2>KOL</h2></div>},
+            { key: 'ai', label: <div className="flex flex-col gap-1 items-center p-1"> <h1>Image</h1> <h2>AI</h2></div> },
           ]} />
       </div>
 
@@ -152,7 +152,7 @@ const TrendingFundsData: TrendingFundData[] = [
     category: FundCategory.AI_MANAGED,
     positive: true,
     per: 15.3,
-    mcap: '$450M',
+    mcap: '+$20',
     performanceData: [100, 110, 115, 125, 135, 145]
   },
   {
@@ -161,7 +161,7 @@ const TrendingFundsData: TrendingFundData[] = [
     category: FundCategory.AI_MANAGED,
     positive: true,
     per: 18.7,
-    mcap: '$620M',
+    mcap: '+$20',
     performanceData: [100, 112, 120, 132, 145, 160]
   },
   {
@@ -170,7 +170,7 @@ const TrendingFundsData: TrendingFundData[] = [
     category: FundCategory.AI_MANAGED,
     positive: true,
     per: 12.5,
-    mcap: '$380M',
+    mcap: '+$20',
     performanceData: [100, 108, 112, 118, 125, 132]
   },
 
@@ -181,7 +181,7 @@ const TrendingFundsData: TrendingFundData[] = [
     category: FundCategory.KOL_MANAGED,
     positive: true,
     per: 22.1,
-    mcap: '$520M',
+    mcap: '+$20',
     performanceData: [100, 115, 128, 140, 155, 170]
   },
   {
@@ -190,7 +190,7 @@ const TrendingFundsData: TrendingFundData[] = [
     category: FundCategory.KOL_MANAGED,
     positive: false,
     per: -5.6,
-    mcap: '$290M',
+    mcap: '+$20',
     performanceData: [100, 95, 90, 85, 80, 75]
   },
   {
@@ -199,7 +199,7 @@ const TrendingFundsData: TrendingFundData[] = [
     category: FundCategory.KOL_MANAGED,
     positive: true,
     per: 16.2,
-    mcap: '$410M',
+    mcap: '+$20',
     performanceData: [100, 112, 118, 126, 135, 145]
   },
 
@@ -210,7 +210,7 @@ const TrendingFundsData: TrendingFundData[] = [
     category: FundCategory.INDEXES,
     positive: true,
     per: 10.8,
-    mcap: '$750M',
+    mcap: '+$20',
     performanceData: [100, 106, 112, 118, 125, 132]
   },
   {
@@ -219,7 +219,7 @@ const TrendingFundsData: TrendingFundData[] = [
     category: FundCategory.INDEXES,
     positive: false,
     per: -3.2,
-    mcap: '$680M',
+    mcap: '+$20',
     performanceData: [100, 97, 94, 90, 86, 82]
   },
   {
@@ -228,7 +228,7 @@ const TrendingFundsData: TrendingFundData[] = [
     category: FundCategory.INDEXES,
     positive: true,
     per: 25.6,
-    mcap: '$920M',
+    mcap: '+$20',
     performanceData: [100, 120, 135, 150, 170, 190]
   },
 
@@ -239,7 +239,7 @@ const TrendingFundsData: TrendingFundData[] = [
     category: FundCategory.CABAL_CHATS,
     positive: true,
     per: 8.7,
-    mcap: '$210M',
+    mcap: '+$20',
     performanceData: [100, 105, 110, 115, 120, 125]
   },
   {
@@ -248,7 +248,7 @@ const TrendingFundsData: TrendingFundData[] = [
     category: FundCategory.CABAL_CHATS,
     positive: false,
     per: -2.1,
-    mcap: '$180M',
+    mcap: '+$20',
     performanceData: [100, 98, 95, 92, 88, 85]
   },
   {
@@ -257,7 +257,7 @@ const TrendingFundsData: TrendingFundData[] = [
     category: FundCategory.CABAL_CHATS,
     positive: true,
     per: 6.5,
-    mcap: '$240M',
+    mcap: '+$20',
     performanceData: [100, 103, 107, 110, 114, 118]
   },
 
@@ -268,7 +268,7 @@ const TrendingFundsData: TrendingFundData[] = [
     category: FundCategory.CRYPTO_AI,
     positive: true,
     per: 14.9,
-    mcap: '$380M',
+    mcap: '+$20',
     performanceData: [100, 110, 118, 126, 135, 144]
   },
   {
@@ -277,7 +277,7 @@ const TrendingFundsData: TrendingFundData[] = [
     category: FundCategory.CRYPTO_AI,
     positive: false,
     per: -4.3,
-    mcap: '$260M',
+    mcap: '+$20',
     performanceData: [100, 96, 92, 88, 84, 80]
   },
   {
@@ -286,7 +286,7 @@ const TrendingFundsData: TrendingFundData[] = [
     category: FundCategory.CRYPTO_AI,
     positive: true,
     per: 11.6,
-    mcap: '$310M',
+    mcap: '+$20',
     performanceData: [100, 107, 112, 118, 124, 130]
   },
 
@@ -297,7 +297,7 @@ const TrendingFundsData: TrendingFundData[] = [
     category: FundCategory.TECH_INNOVATION,
     positive: true,
     per: 30.2,
-    mcap: '$1.2B',
+    mcap: '+$20',
     performanceData: [100, 125, 145, 170, 200, 230]
   },
   {
@@ -306,7 +306,7 @@ const TrendingFundsData: TrendingFundData[] = [
     category: FundCategory.TECH_INNOVATION,
     positive: true,
     per: 19.8,
-    mcap: '$780M',
+    mcap: '+$20',
     performanceData: [100, 115, 130, 145, 160, 175]
   },
   {
@@ -315,7 +315,7 @@ const TrendingFundsData: TrendingFundData[] = [
     category: FundCategory.TECH_INNOVATION,
     positive: false,
     per: -2.7,
-    mcap: '$650M',
+    mcap: '+$20',
     performanceData: [100, 98, 95, 93, 90, 87]
   },
   {
@@ -324,7 +324,7 @@ const TrendingFundsData: TrendingFundData[] = [
     category: FundCategory.TECH_INNOVATION,
     positive: true,
     per: 16.5,
-    mcap: '$520M',
+    mcap: '+$20',
     performanceData: [100, 110, 120, 130, 140, 150]
   },
   {
@@ -333,13 +333,14 @@ const TrendingFundsData: TrendingFundData[] = [
     category: FundCategory.TECH_INNOVATION,
     positive: true,
     per: 12.3,
-    mcap: '$440M',
+    mcap: '+$20',
     performanceData: [100, 108, 114, 120, 126, 132]
   }
 ];
 
 // Updated Fund Card Component
 const TrendingFundCard: React.FC<TrendingFundData> = ({
+  id,
   name,
   category,
   positive,
@@ -351,12 +352,14 @@ const TrendingFundCard: React.FC<TrendingFundData> = ({
   const negativeData = [100, 90, 95, 85, 80, 75];
 
   return (
-    <div className="flex flex-row items-center justify-between p-2 gap-1 border-[#232425] bg-[#1e1e1e] border mx-2 mb-1 rounded">
-      <div className="flex flex-col">
-        <h1 className='text-sm font-medium'>{name}</h1>
-        <div className="flex flex-col w-fit">
-          <span
-            className={`text-xs px-2 py-0.5 rounded ${category === FundCategory.AI_MANAGED ? 'bg-blue-800/50' :
+    <Link href={'/case/' + id}>
+      <div className="flex flex-row justify-between p-2 gap-1 border-[#232425] bg-[#1e1e1e] border mx-2 mb-1 rounded">
+
+        <div className="flex w-[200px] flex-col ">
+          <h1 className='text-sm font-medium'>{name}</h1>
+
+          <div
+            className={`text-xs w-fit px-2 py-0.5 rounded ${category === FundCategory.AI_MANAGED ? 'bg-blue-800/50' :
               category === FundCategory.KOL_MANAGED ? 'bg-green-800/50' :
                 category === FundCategory.INDEXES ? 'bg-purple-800/50' :
                   category === FundCategory.CABAL_CHATS ? 'bg-red-800/50' :
@@ -365,17 +368,17 @@ const TrendingFundCard: React.FC<TrendingFundData> = ({
               } text-white`}
           >
             {category}
-          </span>
-        </div></div>
-      <PNLChart data={positive ? positiveData : negativeData} />
-      <div className="flex flex-col gap-1 text-right">
-        <div className={positive ? 'text-green-400' : 'text-red-400'}>
-          {per}%
+          </div>
         </div>
-        <div className='text-xs text-gray-400'>{mcap} Avg MCap</div>
-      </div>
+        <PNLChart data={positive ? positiveData : negativeData} />
+        <div className="flex flex-col gap-1 text-right">
+          <div className={positive ? 'text-green-400' : 'text-red-400'}>
+            {per}%
+          </div>
+          <div className='text-xs text-gray-400'>{mcap}</div>
+        </div>
 
 
-    </div>
+      </div></Link>
   );
 };
