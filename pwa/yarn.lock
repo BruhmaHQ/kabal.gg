@@ -159,6 +159,32 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@ethersproject/bytes@npm:^5.7.0":
+  version: 5.7.0
+  resolution: "@ethersproject/bytes@npm:5.7.0"
+  dependencies:
+    "@ethersproject/logger": "npm:^5.7.0"
+  checksum: 10c0/07dd1f0341b3de584ef26c8696674ff2bb032f4e99073856fc9cd7b4c54d1d846cabe149e864be267934658c3ce799e5ea26babe01f83af0e1f06c51e5ac791f
+  languageName: node
+  linkType: hard
+
+"@ethersproject/keccak256@npm:^5.7.0":
+  version: 5.7.0
+  resolution: "@ethersproject/keccak256@npm:5.7.0"
+  dependencies:
+    "@ethersproject/bytes": "npm:^5.7.0"
+    js-sha3: "npm:0.8.0"
+  checksum: 10c0/3b1a91706ff11f5ab5496840b9c36cedca27db443186d28b94847149fd16baecdc13f6fc5efb8359506392f2aba559d07e7f9c1e17a63f9d5de9f8053cfcb033
+  languageName: node
+  linkType: hard
+
+"@ethersproject/logger@npm:^5.7.0":
+  version: 5.7.0
+  resolution: "@ethersproject/logger@npm:5.7.0"
+  checksum: 10c0/d03d460fb2d4a5e71c627b7986fb9e50e1b59a6f55e8b42a545b8b92398b961e7fd294bd9c3d8f92b35d0f6ff9d15aa14c95eab378f8ea194e943c8ace343501
+  languageName: node
+  linkType: hard
+
 "@humanwhocodes/config-array@npm:^0.13.0":
   version: 0.13.0
   resolution: "@humanwhocodes/config-array@npm:0.13.0"
@@ -2720,6 +2746,7 @@ __metadata:
     postcss: "npm:^8"
     react: "npm:19.0.0-rc-66855b96-20241106"
     react-dom: "npm:19.0.0-rc-66855b96-20241106"
+    supra-l1-sdk: "npm:^3.1.0"
     tailwind-merge: "npm:^2.5.5"
     tailwindcss: "npm:^3.4.1"
     tailwindcss-animate: "npm:^1.0.7"
@@ -5235,6 +5262,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"js-sha3@npm:0.8.0":
+  version: 0.8.0
+  resolution: "js-sha3@npm:0.8.0"
+  checksum: 10c0/43a21dc7967c871bd2c46cb1c2ae97441a97169f324e509f382d43330d8f75cf2c96dba7c806ab08a425765a9c847efdd4bffbac2d99c3a4f3de6c0218f40533
+  languageName: node
+  linkType: hard
+
+"js-sha3@npm:^0.9.3":
+  version: 0.9.3
+  resolution: "js-sha3@npm:0.9.3"
+  checksum: 10c0/6976feaf79842e39b87d17e41c5bd397240a5d68920ea911fdfb3615eea29f72c6067a5aa19e38989a29b3031ff39834ec9fb2ab066c59368751296629a798f1
+  languageName: node
+  linkType: hard
+
 "js-tokens@npm:^3.0.0 || ^4.0.0":
   version: 4.0.0
   resolution: "js-tokens@npm:4.0.0"
@@ -7590,6 +7631,17 @@ __metadata:
   version: 1.0.0
   resolution: "supports-preserve-symlinks-flag@npm:1.0.0"
   checksum: 10c0/6c4032340701a9950865f7ae8ef38578d8d7053f5e10518076e6554a9381fa91bd9c6850193695c141f32b21f979c985db07265a758867bac95de05f7d8aeb39
+  languageName: node
+  linkType: hard
+
+"supra-l1-sdk@npm:^3.1.0":
+  version: 3.1.0
+  resolution: "supra-l1-sdk@npm:3.1.0"
+  dependencies:
+    "@ethersproject/keccak256": "npm:^5.7.0"
+    aptos: "npm:^1.21.0"
+    js-sha3: "npm:^0.9.3"
+  checksum: 10c0/0276c58064e82e87bf0a9f5d6ab44bfc4d2fa56b88c94c15a0e46d6f7d2851ea49d6716010a7170fa58c463dde52cc26fde959bfa04a7f0f4f5e9594da3313d2
   languageName: node
   linkType: hard
 
