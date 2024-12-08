@@ -1,0 +1,30 @@
+[package]
+name = "Bagz"
+version = "0.0.1"
+authors = []
+
+[addresses]
+bagz = "0x75a56adfc8824156d1a28b9dddecc6aa5448d851743cde18ddd54d296241ce62"
+
+#[dependencies.AptosFramework]
+#git = "https://github.com/aptos-labs/aptos-core.git"
+#rev = "mainnet"
+#subdir = "aptos-move/framework/aptos-framework"
+
+[dependencies.SupraFramework]
+local = "../aptos-core/aptos-move/framework/supra-framework"
+
+
+#[dependencies.aggregator]
+#local = "./anqa_aggregator"
+
+#[dependencies.AptosToken]
+#git = "https://github.com/aptos-labs/aptos-core.git"
+#rev = "mainnet"
+#subdir = "aptos-move/framework/aptos-token"
+#
+#[dependencies.AptosTokenObjects]
+#git = "https://github.com/aptos-labs/aptos-core.git"
+#rev = "mainnet"
+#subdir = "aptos-move/framework/aptos-token-objects"
+
