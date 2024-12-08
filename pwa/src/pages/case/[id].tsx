@@ -1,5 +1,5 @@
 import { PNLChart } from '@/components/atoms/PNLChart';
-import { createSupraSwap } from '@/services/swap';
+import { createSupraSwap, handleSwap } from '@/services/swap';
 import ReactECharts from 'echarts-for-react';
 import { useState } from 'react';
 const option = {
@@ -60,6 +60,8 @@ const CasePage = () => {
 
         const res = await createSupraSwap(amt, inputToken, ethOutputToken, 0.4, btcOutputToken, 0.6)
         console.log(res)
+
+        const a = handleSwap(res.ethSwap.data)
     }
     return (<div>
 

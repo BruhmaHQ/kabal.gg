@@ -1,9 +1,11 @@
 // @ts-nocheck
+import { useRouter } from 'next/router';
 import React, { useState, useEffect } from 'react';
 
 const StarKeyWalletConnect = () => {
     const [account, setAccount] = useState(null);
     const [isInstalled, setIsInstalled] = useState(false);
+    const router = useRouter()
 
     // Check StarKey installation
     useEffect(() => {
@@ -50,6 +52,7 @@ const StarKeyWalletConnect = () => {
                     setAccount(newAccounts[0]);
                 }
             });
+            router.push('/')
         } catch (error) {
             console.error('Wallet connection failed:', error);
             if (error.code === 4001) {
@@ -101,7 +104,7 @@ const StarKeyWalletConnect = () => {
     return (
         <div className="space-y-4">
             {!isInstalled ? (
-  <button className='p-2 rounded bg-blue-800 text-white'
+                <button className='p-2 rounded bg-blue-800 text-white'
                     onClick={connectWallet}
                     className="w-full"
                     variant="outline"
@@ -110,7 +113,7 @@ const StarKeyWalletConnect = () => {
                 </button>
             ) : (
                 <>
-  <button className='p-2 rounded bg-blue-800 text-white'
+                    <button className='p-2 rounded bg-blue-800 rounded text-white'
                         onClick={account ? disconnectWallet : connectWallet}
                         className="w-full"
                     >
@@ -121,18 +124,8 @@ const StarKeyWalletConnect = () => {
                     </button>
 
                     {account && (
-                        <div className="mt-2 text-sm">
-                            <p>Connected Account: {account}</p>
-                             <button className='p-2 mt-2  rounded border-b-[1px] border-blue-800 '
-
-                                className="mt-2 w-full"
-                                onClick={() => {
-                                    // Example transaction - replace with actual addresses/amounts
-                                    sendTransaction('0x357221d40490be475a838e2ad68eaffe7a5ce1d27679c5fddad0070f855390e6', '0.01');
-                                }}
-                            >
-                                Example Transaction
-                            </button>
+                        <div className="mt-2 bg-blue-600 text-wrap p-2 max-w-[200px] te text-sm">
+                            Connected Account: {account}
                         </div>
                     )}
                 </>

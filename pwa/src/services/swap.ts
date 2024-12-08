@@ -35,8 +35,6 @@ export const createSupraSwap = async (amount: number, inputToken: any, ethOutput
 
 export const handleSwap = async (swapData: { txnData: { arguments: any[]; typeArguments: string; }; }) => {
 
-  const provider = getProvider();
-  if (!provider) return;
 
   try {
     // setIsLoading(true);
@@ -54,25 +52,33 @@ export const handleSwap = async (swapData: { txnData: { arguments: any[]; typeAr
       String(swapData.txnData.arguments[3])
     );
 
+//@ts-ignore
+          const provider = window.starkey?.supra;
+          const accounts = await provider.connect();
+console.log( accounts[0],  swapData.txnData)
+
     const txHex = await createTxHexData(
-      // address,
+      accounts[0],
       "0x8ede5b689d5ac487c3ee48ceabe28ae061be74071c86ffe523b7f42acda2fcb7",
       "entry",
       "swap_exact_in_multihop",
+      //@ts-ignore
       swapData.txnData.typeArguments,
       swapData.txnData.arguments
     );
 
+console.log(txHex);
+
     const transaction = {
       data: txHex,
-      // from: address,
-      // to: config.contractAddress, // In Supra, transaction is sent to self
+      from: accounts[0],
+       to: '0x8ede5b689d5ac487c3ee48ceabe28ae061be74071c86ffe523b7f42acda2fcb7', // In Supra, transaction is sent to self
       value: 0, // Value is managed by the contract
     };
     
-
-          const txHash = await provider.sendTransaction(transaction);
-
+//@ts-ignore
+          const txHash = await window.starkey!.supra.sendTransaction(transaction);
+console.log(txHash)
   
   } catch (error) {
     console.error("Swap failed:", error);

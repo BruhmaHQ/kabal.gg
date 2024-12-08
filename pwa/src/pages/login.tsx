@@ -8,7 +8,7 @@ const Login = () => {
             <h1 className="font-mono text-3xl font-semibold">kabal.gg</h1>
 
 
-            <div className=""><ConnectButton /></div>
+            {/* <div className=""><ConnectButton /></div> */}
 
             <SupraWalletConnect />
         </div>

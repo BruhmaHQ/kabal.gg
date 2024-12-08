@@ -56,14 +56,14 @@ export default function Home() {
           <img src="./assets/trending.png" className='h-[42px]' alt="" />
           <h1 className="font-semibold ">Trending Cases</h1>
         </div>
-        <Tabs activeTab={active} setActiveTab={setActive} layoutid="home-tabs"
+        {/* <Tabs activeTab={active} setActiveTab={setActive} layoutid="home-tabs"
           tabs={[
             { key: 'all', label: <div className="flex flex-col gap-1 items-center p-1"> <h1>Image</h1> <h2>All</h2></div> },
             { key: 'index', label: <div className="flex flex-col gap-1 items-center p-1"> <h1>Image</h1> <h2>Index</h2></div> },
             { key: 'kabal', label: <div className="flex flex-col gap-1 items-center p-1"> <h1>Image</h1> <h2>Kabal</h2></div> },
             { key: 'kol', label: <div className="flex flex-col gap-1 items-center p-1"> <h1>Image</h1> <h2>KOL</h2></div>},
             { key: 'ai', label: <div className="flex flex-col gap-1 items-center p-1"> <h1>Image</h1> <h2>AI</h2></div> },
-          ]} />
+          ]} /> */}
       </div>
 
 
@@ -147,31 +147,22 @@ interface TrendingFundData {
 const TrendingFundsData: TrendingFundData[] = [
   // AI Managed Funds
   {
-    id: 'anthropic-ai-fund',
-    name: 'Anthropic Intelligence Fund',
-    category: FundCategory.AI_MANAGED,
+    id: 'ai-innovation-index',
+    name: 'Global AI Innovation Index',
+    category: FundCategory.INDEXES,
     positive: true,
-    per: 15.3,
+    per: 10.8,
     mcap: '+$20',
-    performanceData: [100, 110, 115, 125, 135, 145]
+    performanceData: [100, 106, 112, 118, 125, 132]
   },
   {
-    id: 'openai-ventures-fund',
-    name: 'OpenAI Ventures Fund',
-    category: FundCategory.AI_MANAGED,
-    positive: true,
-    per: 18.7,
+    id: 'tech-disruptors-index',
+    name: 'Tech Disruptors Composite Index',
+    category: FundCategory.INDEXES,
+    positive: false,
+    per: -3.2,
     mcap: '+$20',
-    performanceData: [100, 112, 120, 132, 145, 160]
-  },
-  {
-    id: 'deepmind-strategic-fund',
-    name: 'DeepMind Strategic Investments',
-    category: FundCategory.AI_MANAGED,
-    positive: true,
-    per: 12.5,
-    mcap: '+$20',
-    performanceData: [100, 108, 112, 118, 125, 132]
+    performanceData: [100, 97, 94, 90, 86, 82]
   },
 
   // KOL Managed Funds
@@ -201,27 +192,36 @@ const TrendingFundsData: TrendingFundData[] = [
     per: 16.2,
     mcap: '+$20',
     performanceData: [100, 112, 118, 126, 135, 145]
+  }, {
+    id: 'anthropic-ai-fund',
+    name: 'Anthropic Intelligence Fund',
+    category: FundCategory.AI_MANAGED,
+    positive: true,
+    per: 15.3,
+    mcap: '+$20',
+    performanceData: [100, 110, 115, 125, 135, 145]
+  },
+  {
+    id: 'openai-ventures-fund',
+    name: 'OpenAI Ventures Fund',
+    category: FundCategory.AI_MANAGED,
+    positive: true,
+    per: 18.7,
+    mcap: '+$20',
+    performanceData: [100, 112, 120, 132, 145, 160]
+  },
+  {
+    id: 'deepmind-strategic-fund',
+    name: 'DeepMind Strategic Investments',
+    category: FundCategory.AI_MANAGED,
+    positive: true,
+    per: 12.5,
+    mcap: '+$20',
+    performanceData: [100, 108, 112, 118, 125, 132]
   },
 
   // Indexes
-  {
-    id: 'ai-innovation-index',
-    name: 'Global AI Innovation Index',
-    category: FundCategory.INDEXES,
-    positive: true,
-    per: 10.8,
-    mcap: '+$20',
-    performanceData: [100, 106, 112, 118, 125, 132]
-  },
-  {
-    id: 'tech-disruptors-index',
-    name: 'Tech Disruptors Composite Index',
-    category: FundCategory.INDEXES,
-    positive: false,
-    per: -3.2,
-    mcap: '+$20',
-    performanceData: [100, 97, 94, 90, 86, 82]
-  },
+  
   {
     id: 'ai-chip-index',
     name: 'AI Semiconductor Index',
