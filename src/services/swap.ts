@@ -1,70 +1,79 @@
-// const handleSwap = async () => {
-//     if (!isConnected) {
-//       toast.error("Please connect your wallet");
-//       return;
-//     }
+import axios from 'axios';
+import { createTxHexData } from './supra';
 
-//     if (!swapData || !address) {
-//       toast.error("Failed to prepare swap transaction");
-//       return;
-//     }
+const SWAP_API_URL = "https://swap-backend-prod-340342993997.asia-south2.run.app/api/swap";
 
-//     const provider = getProvider();
-//     if (!provider) return;
+export const createSupraSwap = async (amount: number, inputToken: any, ethOutputToken: any, ethPercent:number, btcOutputToken: any, btcPercent:number) => {
+  try {
+    const ethAmount = amount * ethPercent; 
+    const btcAmount = amount * btcPercent; 
 
-//     try {
-//       setIsLoading(true);
-//       // const transaction = {
-//       //   data: swapData.txnData,
-//       //   from: address,
-//       //   to: address, // In Supra, transaction is sent to self
-//       //   value: "0", // Value is managed by the contract
-//       // };
+    // ETH Swap
+    const ethResponse = await axios.post(SWAP_API_URL, {
+      amountIn: ethAmount,
+      inputToken: inputToken,
+      outputToken: ethOutputToken,
+    });
 
-//       swapData.txnData.arguments[2] = parseInt(
-//         String(swapData.txnData.arguments[2])
-//       );
-//       swapData.txnData.arguments[3] = parseInt(
-//         String(swapData.txnData.arguments[3])
-//       );
+    const btcResponse = await axios.post(SWAP_API_URL, {
+      amountIn: btcAmount,
+      inputToken: inputToken,
+      outputToken: btcOutputToken,
+    });
 
-//       const txHex = await createTxHexData(
-//         address,
-//         config.contractAddress,
-//         "entry",
-//         "swap_exact_in_multihop",
-//         swapData.txnData.typeArguments,
-//         swapData.txnData.arguments
-//       );
-
-//       const transaction = {
-//         data: txHex,
-//         from: address,
-//         to: config.contractAddress, // In Supra, transaction is sent to self
-//         value: 0, // Value is managed by the contract
-//       };
-//       TokenSelectModal;
-
-//             const txHash = await provider.sendTransaction(transaction);
-
-    
-//     } catch (error) {
-//       console.error("Swap failed:", error);
-//       toast.error("Failed to execute swap");
-//     } 
-//   };
+    return {
+      ethSwap: ethResponse.data,
+      btcSwap: btcResponse.data,
+    };
+  } catch (error) {
+    console.error('Error creating swaps:', error);
+    throw error;
+  }
+};
 
 
+// export const handleSwap = async (swapData) => {
 
+//   // const provider = getProvider();
+//   // if (!provider) return;
 
-// const response = await axios.post(
-//     ${config.swapBackendUrl}/api/swap,
-//     {
-//       amountIn: parseFloat(inputAmount),
-//       inputToken: inputToken.address,
-//       outputToken: outputToken.address,
-//     },
-//     {}
-//   );
+//   try {
+//     // setIsLoading(true);
+//     // const transaction = {
+//     //   data: swapData.txnData,
+//     //   from: address,
+//     //   to: address, // In Supra, transaction is sent to self
+//     //   value: "0", // Value is managed by the contract
+//     // };
 
-//   const data = response.data;
+//     swapData.txnData.arguments[2] = parseInt(
+//       String(swapData.txnData.arguments[2])
+//     );
+//     swapData.txnData.arguments[3] = parseInt(
+//       String(swapData.txnData.arguments[3])
+//     );
+
+//     const txHex = await createTxHexData(
+//       // address,
+//       // config.contractAddress,
+//       "entry",
+//       "swap_exact_in_multihop",
+//       swapData.txnData.typeArguments,
+//       swapData.txnData.arguments
+//     );
+
+//     const transaction = {
+//       data: txHex,
+//       // from: address,
+//       // to: config.contractAddress, // In Supra, transaction is sent to self
+//       value: 0, // Value is managed by the contract
+//     };
+//     TokenSelectModal;
+
+//           const txHash = await provider.sendTransaction(transaction);
+
+  
+//   } catch (error) {
+//     console.error("Swap failed:", error);
+//   } 
+// };
