@@ -1,3 +1,4 @@
+import SupraWalletConnect from '@/components/atoms/WalletConnect';
 import { ConnectButton } from '@rainbow-me/rainbowkit';
 
 const Login = () => {
@@ -8,6 +9,8 @@ const Login = () => {
 
 
             <div className=""><ConnectButton /></div>
+
+            <SupraWalletConnect />
         </div>
 
     </>)
