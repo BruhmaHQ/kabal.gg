@@ -1,4 +1,4 @@
-<img src="./public/assets/logo.png" width='80'/>
+<img src="./pwa/public/assets/logo.png" width='80'/>
 
 # Kabal.gg
 
